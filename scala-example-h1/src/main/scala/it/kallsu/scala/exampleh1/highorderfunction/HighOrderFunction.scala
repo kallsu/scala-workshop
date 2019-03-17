@@ -42,7 +42,7 @@ object HighOrderFunction {
 
       // try to convert
       time <- Try(new java.util.Date(ms))
-      
+
     } yield (time)
 
     // resolve the try
