@@ -4,7 +4,7 @@ package it.kallsu.scala.exampleh1.objectoriented
   * Trait of PIZZA
   */
 trait Pizza {
-  val name : String
+  val name: String
 }
 
 /**
@@ -12,19 +12,19 @@ trait Pizza {
   *
   * @param name
   */
-class PizzaPlay(val name : String) extends Pizza {}
+class PizzaPlay(val name: String) extends Pizza {}
 
 /**
   * I want create a new Self-type PIZZA.
   */
 trait CompositePizza {
 
-  val basePizza : Pizza
+  this: Pizza =>
 
-  val topping : String
+  val topping: String
 
-  def getName() : String = {
-    (s"base Pizza is ${basePizza.name} and topping is ${topping}")
+  def getName(): String = {
+    (s"base Pizza is $name and topping is $topping")
   }
 }
 
@@ -34,7 +34,7 @@ trait CompositePizza {
   * @param topping
   * @param basePizza
   */
-class GiorgioPizza(val topping : String, val basePizza : Pizza) extends CompositePizza {
+class GiorgioPizza(override val name: String, val topping: String) extends CompositePizza with Pizza {
 }
 
 object Main2 {
@@ -42,11 +42,10 @@ object Main2 {
   def main(args: Array[String]): Unit = {
     val myPizza = new GiorgioPizza(
       topping = "tomatoes and mozzarella",
-      basePizza = new PizzaPlay(name = "pizza play no spicy")
-    );
+      name = "Margherita")
 
     // pronouce your name pizza ...
-    println(s"Giorgio's pizza today is : ${myPizza.getName()}")
+    println(s"\nGiorgio's pizza today is : ${myPizza.getName()}")
   }
 }
 
