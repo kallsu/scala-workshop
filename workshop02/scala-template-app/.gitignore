@@ -1,0 +1,7 @@
+# Compiled source #
+###################
+*.class
+target
+target/*
+
+.idea
