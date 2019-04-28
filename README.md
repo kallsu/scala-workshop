@@ -1,16 +1,22 @@
-# Scala WorkShop / Example
+# Scala WorkShops
 
-This is my project to archive the Scala lessons / examples and workshops which I created and I am going to make about Scala language.
+This is the repository for all projects involved the Scala workshops.
 
-This project is made by my experience, so can be improved by your contribution.
+ 1st Scala Workshop - Changing your coding way
+
+ 2nd Scala Workshop - Practical coding way
 
 ## Examples
 
 The examples folders are:
 
- - scala-example-h1, it contains examples about Scala concepts, DSL, call by-name/by-value, functions and methods
- - scala-example-h2, it contains examples about Monoids, Monads, Hierachy and Polymorphism, Options and Futures
+ - workshop01/scala-example-h1, it contains examples about Scala concepts, DSL, call by-name/by-value, functions and methods
+ - workshop02/scala-example-h2, it contains examples about Monoids, Monads, Hierachy and Polymorphism, Options and Futures
 
 ## Links
 
 For any discussion or informations, please contact me : giorgio[dot]desideri[at]gmail[dot]com
+
+## Thanks To
+
+7 Peaks Software, for opportunity and location, http://7peakssoftware.com
