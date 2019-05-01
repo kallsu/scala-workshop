@@ -39,10 +39,15 @@ object Dependencies {
     "com.typesafe.akka" %% "akka-http-testkit" % versions("akka-http") % Test
   )
 
+  // database
+  val databaseLibraries = Seq(
+    "postgresql" % "postgresql" % "9.1-901-1.jdbc4"
+  )
+
   // -======================================================-
   // -= PROJECT LIBRARIES =-
   // -======================================================-
 
   // basic project libraries
-  lazy val basicLibraries = testLibraries ++ commonLibraries ++ akkaLibraries
+  lazy val basicLibraries = testLibraries ++ commonLibraries ++ akkaLibraries ++ databaseLibraries
 }

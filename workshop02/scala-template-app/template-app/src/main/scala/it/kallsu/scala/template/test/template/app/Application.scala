@@ -1,9 +1,9 @@
-package it.kallsu.scala.template.app
+package it.kallsu.scala.template.test.template.app
 
 import akka.actor.ActorSystem
-import akka.stream.ActorMaterializer
 import akka.http.scaladsl.Http
-import it.kallsu.scala.{ApplicationLogger, SimpleAppLogger}
+import akka.stream.ActorMaterializer
+import it.kallsu.scala.template.test.logging.{ApplicationLogger, SimpleAppLogger}
 
 
 object Application extends ApplicationRouting {
@@ -22,7 +22,7 @@ object Application extends ApplicationRouting {
     logger.debug("Start endpoint.")
 
     // build the server endpoint
-    val bindingFuture = Http().bindAndHandle(allRoutes, interface="localhost", port = 8080)
+    val bindingFuture = Http().bindAndHandle(allRoutes, interface = "localhost", port = 8080)
 
     // start and stop
     bindingFuture

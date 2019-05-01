@@ -1,13 +1,15 @@
-package it.kallsu.scala
+package it.kallsu.scala.template.test.logging
 
 import org.slf4j.{Logger, LoggerFactory}
 
 /**
   * Simple application logger.
   *
-  * @param callerClass
+  * @param classToLog
   */
-case class SimpleAppLogger(private val callerClass: String) extends ApplicationLogger {
+case class SimpleAppLogger(val classToLog: String) extends ApplicationLogger {
+
+  override protected val callerClass : String = classToLog
 
   private val logger: Logger = LoggerFactory.getLogger(callerClass)
 

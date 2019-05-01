@@ -1,4 +1,4 @@
-package it.kallsu.scala
+package it.kallsu.scala.template.test.logging
 
 /**
   * Representation of log level based on integer values
@@ -13,6 +13,8 @@ object ApplicationLogLevel {
 }
 
 trait ApplicationLogger {
+
+  protected def callerClass : String
 
   // Who Make the dirty job
   protected def writesLog(level: Int, message: String): Unit = ???

@@ -1,4 +1,4 @@
-package it.kallsu.scala.template.app
+package it.kallsu.scala.template.test.template.app
 
 import akka.http.scaladsl.marshallers.sprayjson.SprayJsonSupport
 import spray.json._
