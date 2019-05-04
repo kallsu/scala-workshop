@@ -15,7 +15,7 @@ trait BaseDAO[T <: BaseEntity] {
   def update(entity: T): Option[T] = ???
 
   // Asynchronous methods
-  def findByIdAsync(id: Long): Future[T] = ???
+  def findByIdAsync(id: Long): Future[Option[T]] = ???
 
   def getAllAsync(): Future[List[T]] = ???
 

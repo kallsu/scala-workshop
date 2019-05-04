@@ -1,6 +1,8 @@
 package it.kallsu.scala.gcommerce.entity
 
-abstract class BaseEntity(val id: Long) {
+trait BaseEntity {
+
+  def id : Long
 
   override def equals(obj: Any): Boolean = {
     if (obj == null)
